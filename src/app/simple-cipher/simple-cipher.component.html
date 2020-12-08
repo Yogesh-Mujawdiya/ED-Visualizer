@@ -1,0 +1,22 @@
+<div style="text-align: center;">
+    <mat-card class="card">
+        <mat-card-content>
+            <mat-form-field color='warn' appearance="outline">
+                <mat-label>Key</mat-label>
+                <input matInput placeholder="Key" name="Key" required [(ngModel)]="Key" />
+            </mat-form-field>
+            <mat-form-field color='warn' appearance="outline">
+                <mat-label>Plain Text</mat-label>
+                <textarea matInput placeholder="Plain Text" (input)="Encryption()" [(ngModel)]='PlainText'></textarea>
+            </mat-form-field>
+            <br>
+            <mat-icon class="Icon">swap_horiz</mat-icon><br>
+            <mat-form-field color='warn' appearance="outline">
+                <mat-label>Cipher Text</mat-label>
+                <textarea matInput placeholder="Cipher Text" (input)="Decryption()" [(ngModel)]='CipherText' autocomplete="off"></textarea>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+    <button mat-raised-button color="accent" (click)="openEncryptionDialog()">Encryption</button>
+    <button mat-raised-button color="accent" (click)="openDecryptionDialog()">Decryption</button>
+</div>

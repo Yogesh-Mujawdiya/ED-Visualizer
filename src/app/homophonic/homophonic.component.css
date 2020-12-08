@@ -1,0 +1,31 @@
+
+
+.KeyTable{
+    border-collapse: collapse;
+    width: 235px;
+    margin: auto;
+    overflow: auto;
+    margin-bottom: 10px;
+  }
+  thead, tbody { 
+    display: block;
+  }
+  .KeyTable tbody {
+    max-height: 145px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+  }
+  .KeyTable thead{
+    background-color: gold;
+  }
+  .KeyTable td{
+    border: 1px solid black;
+  }
+  .KeyTable th{
+    border: 1px solid black;
+  }
+  
+  .KayField{
+    background-color: gainsboro;
+  }
+  

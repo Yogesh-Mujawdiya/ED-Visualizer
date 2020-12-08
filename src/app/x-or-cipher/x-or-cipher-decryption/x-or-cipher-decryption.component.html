@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Decryption</h1>
+<div mat-dialog-content>
+    <table class="DataTable">
+        <tr>
+            <th>Plain Text</th>
+            <td><pre>{{PlainText}}</pre></td>
+        </tr>
+        <tr>
+            <th>Cipher Text</th>
+            <td><pre>{{CipherText}}</pre></td>
+        </tr>
+    </table>
+    <mat-divider style="margin: 10px;"></mat-divider>
+    <table class="VisualizerTable" border="1" id="Visualizer">
+        <tr>
+            <td>Text</td>
+            <td>Text Ascci</td>
+            <td>XOr</td>
+            <td>Key Ascci</td>
+            <td>Cipper Ascci</td>
+            <td>Cipper</td>
+        </tr>
+        <tr *ngFor='let M of PlainTextMatrix;'>
+            <td *ngFor='let x of M;'>{{x}}</td>
+        </tr>
+    </table>
+</div>
+<mat-divider style="margin: 10px;"></mat-divider>
+<div mat-dialog-action align="center">
+    <div style="width: 80%; max-width: 500px; margin-top: 10px;">
+        <mat-form-field color="primary" style="width: 80px; margin-left: 10px;">
+            <mat-label>Speed</mat-label>
+            <input matInput type="number" placeholder="Speed" name="Speed" id="Speed" (input)="validateValue()" required [(ngModel)]="Speed" />
+        </mat-form-field>
+        <mat-slider [(ngModel)]="Speed" min="100" style="width: calc(100% - 90px);" thumbLabel [step]="5" max="9999">
+        </mat-slider>
+    </div>
+    <button mat-raised-button color="primary" [disabled]='Play' (click)='PlayEncryption()'>Play</button>
+</div>

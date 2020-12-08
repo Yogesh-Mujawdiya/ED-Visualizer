@@ -1,0 +1,197 @@
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+
+.container {
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: transparent; }
+  10%{     color: white; }
+  49%{    color: white; }
+  70%{    color: white; }
+  99%{    color: transparent; }
+  100%{   color: transparent; }
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 900;
+  margin: 0 0 .5em;
+}
+
+@media (min-width: 450px) {
+  h1 {
+    font-size: 1.75em;
+  }
+}
+@media (min-width: 760px) {
+  h1 {
+    font-size: 3.25em;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    font-size: 5.25em;
+    margin: 0 0 1em;
+  }
+}
+
+button {
+  margin: 10px;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+input{
+  text-transform: uppercase;
+}
+
+mat-form-field{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 225px;
+}
+mat-grid-tile {
+  background: white;
+  border-radius: 10px;
+  border: 5px solid #E1332D;
+}
+.Icon{
+  margin-top: -10px;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.card{
+  margin: auto;
+  max-width: 790px;
+}
+.Res{
+  display: none;
+}
+
+@media only screen and (max-width: 560px) {
+  .Res{
+    display: block;
+  }
+  .Polygrm_Table{
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .card{
+    max-width: 300px;
+  }
+  mat-expansion-panel{
+    max-width: 300px;
+  }
+}
+
+.KeyTable{
+  border-collapse: collapse;
+  width: 235px;
+  margin: auto;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+thead, tbody { 
+  display: block;
+}
+.KeyTable tbody {
+  max-height: 145px;       /* Just for the demo          */
+  overflow-y: auto;    /* Trigger vertical scroll    */
+  overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+.KeyTable thead{
+  background-color: gold;
+}
+.KeyTable td{
+  border: 1px solid black;
+}
+.KeyTable th{
+  border: 1px solid black;
+}
+
+.KayField{
+  background-color: gainsboro;
+}
+
+.Normal{
+  background-color: transparent;
+}
+.Activate{
+  background-color: greenyellow;
+}
+.CodeActivate{
+  background-color: orangered;
+}
+.CodeDeActivate{
+  background-color: goldenrod;
+}
+
+.DeActivate{
+  background-color: silver;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  font-size: 15px;
+  color: #fff;
+  background-color: #E1332D;
+  font-family: 'helvetica';
+  text-align: center;
+  padding: 5px;
+}
+
+footer .nickname {
+  color: greenyellow;
+}
+mat-expansion-panel{
+  margin: auto;
+  margin-left: 5px;
+  text-align: center;
+  margin-top: 5px;
+  padding: 0px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  vertical-align: top;
+  display: inline-block;
+  width: 390px;
+}
+
+.Polygrm_Table{
+  margin: auto;
+  font-size: smaller;
+  border-collapse: collapse;
+  min-width: 200px;
+}
+
+.TableData{
+  line-height: 0px;
+}

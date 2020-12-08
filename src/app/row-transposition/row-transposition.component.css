@@ -1,0 +1,19 @@
+
+mat-form-field{
+    width: 85%;
+}
+
+mat-card{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button{
+    width: 95%;
+    margin: auto;
+    max-width: 800px;
+    margin-top: 10px;
+}

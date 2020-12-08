@@ -1,0 +1,28 @@
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+
+
+.Title{
+    color: white;
+    font-size: xx-large;
+    flex: 1 1 auto;
+    text-align: center;
+    font-weight: bolder;
+    font-family: serif;
+}
+
+mat-form-field{
+    width: 80%;
+    margin: auto;
+}
+
+.Selecter{
+    flex: 1 1 auto;
+    margin-top: 30px;
+    text-align: center;
+}

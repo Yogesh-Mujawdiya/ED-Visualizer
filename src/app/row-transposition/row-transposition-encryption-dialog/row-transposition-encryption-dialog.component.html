@@ -1,0 +1,46 @@
+<h1 mat-dialog-title>Encryption</h1>
+<div mat-dialog-content>
+    <table class="DataTable">
+        <tr><th>Plain Text</th><td><pre>{{PlainText}}</pre></td></tr>
+        <tr><th>Cipher Text</th><td><pre>{{CipherText}}</pre></td></tr>
+    </table>
+
+    <table class="VisualizerTable" border="1"  id="RT">
+        <tr>
+            <td class="Activate" *ngFor='let i of Key.split("")'>
+                {{i}}
+            </td>
+        </tr>
+        <tr>
+            <td *ngFor='let i of KM'>{{i[1]}}</td>
+        </tr>
+        <tr *ngFor='let i of Matrix'>
+            <td *ngFor='let j of i'>{{j}}</td>
+        </tr>
+    </table>
+</div>
+<div mat-dialog-action align="center">
+    <div style="width: 80%; max-width: 500px; margin-top: 10px;">
+        <mat-form-field
+            color="primary"
+            style="width: 80px; margin-left: 10px;">
+            <mat-label>Speed</mat-label>
+            <input matInput
+                type="number" 
+                placeholder="Speed" 
+                name="Speed" 
+                id="Speed"
+                (input)="validateValue()"
+                required [(ngModel)]="Speed"/>
+        </mat-form-field>
+        <mat-slider [(ngModel)]="Speed"  
+            min="100"
+            style="width: calc(100% - 90px);"
+            thumbLabel
+            [step]="5"
+            max="9999">
+        </mat-slider>
+    </div>
+        
+    <button mat-raised-button color="primary" [disabled]='Play' (click)='PlayEncryptionMethod()'>Play</button>
+</div>

@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+    <span class="Title">
+    Encrypt Decrypt Visualizer
+  </span>
+</mat-toolbar>
+
+<mat-toolbar color="primary">
+    <span class="Selecter">
+    <mat-form-field style="width: 85%;" color='warn' appearance="outline">
+      <mat-label>Encryption Method</mat-label>
+      <mat-select (selectionChange)="onMethodChange()" [(ngModel)]='Encryption_Method' name="Method">
+        <mat-option value="Simple_Cipher">Simple Cipher</mat-option>
+        <mat-option value="Monoalphabetic">Monoalphabetic</mat-option>
+        <mat-option value="Baconian_Cipher">Baconian Cipher</mat-option>
+        <mat-option value="VigenereCipher">Vigenere Cipher</mat-option>
+        <mat-option value="X_Or_Cipher">X Or Cipher</mat-option>
+        <mat-option value="Row_Transposition">Row Transposition</mat-option>
+          <mat-option value="Playfair">Playfair Cipher</mat-option>
+          <mat-option value="Homophonic">Homophonic</mat-option>
+          <mat-option value="Polygram_Substituiton">Polygram Substituiton</mat-option>
+          <mat-option value="Rail_Fence">Rail Fence</mat-option>
+      </mat-select>
+  </mat-form-field>
+  </span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<mat-divider style="margin: 10px; margin-bottom: 50px;"></mat-divider>
+
+<app-footer></app-footer>

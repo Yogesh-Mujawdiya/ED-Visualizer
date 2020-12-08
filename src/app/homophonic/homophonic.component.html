@@ -1,0 +1,46 @@
+<div style="text-align: center;">
+    <mat-card class="card"> 
+        <mat-card-content>
+            <table class="KeyTable">
+                <thead>
+                    <tr>
+                        <th colspan="4">Key Metrix</th>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;max-width: 30px;">S.N.</td>
+                        <td style="width: 50px;max-width: 50px;">Letter</td>
+                        <td style="width: 110px;max-width: 110px;">Replacement(s)</td>
+                        <td style="width: 43px;max-width: 43px;">Edit</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="KayField" *ngFor="let d of Keys;let i=index">
+                        <td style="width: 30px;max-width: 30px;">{{i+1}}</td>
+                        <td style="width: 50px;max-width: 50px;" contenteditable>{{ d.Letter }}</td>
+                        <td style="width: 110px;max-width: 110px;text-align: left;" contenteditable>{{ d.Replacement }}</td>
+                        <td style="width: 26px;max-width: 26px;" (click)="deleteRow(d)" matTooltip="Delete Key"><mat-icon>cancel</mat-icon></td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr style="background-color: greenyellow;">
+                        <td  style="width: 30px;max-width: 30px;">Add</td>
+                        <td  style="width: 50px;max-width: 50px;" matTooltip="Enter New Letter" contenteditable [textContent]="NewLetter" (input)="NewLetter=$event.target.textContent">{{NewLetter}}</td>
+                        <td  style="width: 110px;max-width: 110px;text-align: left;" matTooltip="Enter Replacement Letters" contenteditable [textContent]="NewReplacement" (input)="NewReplacement=$event.target.textContent">{{NewReplacement}}</td>
+                        <td style="width: 43px;max-width: 43px;" (click)='addRow()' matTooltip="ADD Key" ><mat-icon>add_circle</mat-icon></td>
+                    </tr>
+                </thead>
+            </table>
+            <mat-form-field color='warn' appearance="outline">
+                <mat-label>Plain Text</mat-label>
+                <textarea  matInput placeholder="Plain Text" (input)="Encryption()" [(ngModel)]='PlainText' ></textarea>
+            </mat-form-field>
+            <br><mat-icon class="Icon" >swap_horiz</mat-icon><br>
+            <mat-form-field color='warn' appearance="outline">
+                <mat-label>Cipher Text</mat-label>
+                <textarea matInput placeholder="Cipher Text" (input)="Decryption()" [(ngModel)]='CipherText' autocomplete="off"></textarea>
+            </mat-form-field>    
+        </mat-card-content>
+    </mat-card>
+    <button mat-raised-button color="accent" (click)="openEncryptionDialog()">Encryption</button>
+    <button mat-raised-button color="accent" (click)="openDecryptionDialog()">Decryption</button>
+</div>
